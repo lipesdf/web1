@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S&J CAR</title>
+  <link rel="icon" href="/assets/favicon.ico">
+  <link rel="stylesheet" href="/style/global.css">
+</head>
+<body>
+  <div id="navbar"></div>
+
+  <main>
+    <div class="buscar">
+      <p>Busque por:</p>
+      <input type="text" placeholder="Digite o nome do carro..." />
+
+      <select name="cidade" id="cidade">
+        <option value="">Cidade</option>
+        <option value="opcao1">São Paulo</option>
+        <option value="opcao2">Rio de Janeiro</option>
+        <option value="opcao3">Belo Horizonte</option>
+        <option value="opcao4">Uberlândia</option>
+        <option value="opcao5">Curitiba</option>
+        <option value="opcao6">Porto Alegre</option>
+      </select>
+
+      <select name="marca" id="buscar">
+        <option value="">Marca</option>
+        <option value="opcao1">Honda</option>
+        <option value="opcao2">Chevrolet</option>
+        <option value="opcao2">Fiat</option>
+        <option value="opcao2">Ford</option>
+        <option value="opcao2">Hyundai</option>
+        <option value="opcao2">Mitsubishi</option>
+      </select>
+
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=1200&auto=format&fit=crop" alt="Carro">
+
+        <div class="card-content">
+          <h2>Honda Civic Touring</h2>
+
+          <p class="descricao">
+            Sedan automático completo, banco em couro e multimídia.
+          </p>
+
+          <div class="info">
+            <span>2022</span>
+            <span>Uberlândia</span>
+            <span>32.000 KM</span>
+          </div>
+
+          <h3>R$ 128.900</h3>
+
+          <button>Comprar</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1200&auto=format&fit=crop" alt="Carro">
+
+        <div class="card-content">
+          <h2>Hyundai Creta</h2>
+
+          <p class="descricao">
+            SUV confortável, econômico e perfeito para viagens longas.
+          </p>
+
+          <div class="info">
+            <span>2023</span>
+            <span>Uberlândia</span>
+            <span>12.500 KM</span>
+          </div>
+
+          <h3>R$ 145.000</h3>
+
+          <button>Comprar</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1200&auto=format&fit=crop" alt="Carro">
+
+        <div class="card-content">
+          <h2>Chevrolet Onix</h2>
+
+          <p class="descricao">
+            Compacto moderno com ótimo consumo e central multimídia.
+          </p>
+
+          <div class="info">
+            <span>2021</span>
+            <span>Uberlândia</span>
+            <span>48.000 KM</span>
+          </div>
+
+          <h3>R$ 78.500</h3>
+
+          <button>Comprar</button>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <script src="/js/loadComponent.js"></script>
+</body>
+</html>

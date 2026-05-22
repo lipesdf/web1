@@ -1,0 +1,27 @@
+@import url(/style/navbar.css);
+@import url(/style/main.css);
+@import url(/style/cadastro.css);
+@import url(/style/login.css);
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #f0f0f0;
+}
+
+main {
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
