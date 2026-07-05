@@ -145,7 +145,8 @@
   margin-bottom: 15px;
 }
 
-.card-content button{
+.card-content button,
+.card-content .card-button{
   width: 100%;
   height: 45px;
 
@@ -161,8 +162,13 @@
   cursor: pointer;
 
   transition: 0.3s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.card-content button:hover{
+.card-content button:hover,
+.card-content .card-button:hover{
   background-color: #333;
 }

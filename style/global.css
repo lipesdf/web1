@@ -1,5 +1,6 @@
 @import url(/style/navbar.css);
 @import url(/style/main.css);
+@import url(/style/detalhes-carro.css);
 @import url(/style/cadastro.css);
 @import url(/style/login.css);
 
@@ -24,4 +25,3 @@ a {
   text-decoration: none;
   color: inherit;
 }
-

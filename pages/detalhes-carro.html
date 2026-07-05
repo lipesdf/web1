@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalhes do Veiculo | S&J CAR</title>
+  <link rel="icon" href="/assets/favicon.ico">
+  <link rel="stylesheet" href="/style/global.css">
+</head>
+<body>
+  <div id="navbar"></div>
+
+  <main class="detalhe-page">
+    <section class="detalhe-header">
+      <a class="voltar-link" href="/pages/home.html">Voltar para veiculos</a>
+
+      <div class="detalhe-titulo">
+        <div>
+          <p class="detalhe-categoria" id="carroCategoria">Sedan</p>
+          <h1 id="carroNome">Honda Civic Touring</h1>
+          <p id="carroResumo">Sedan automatico completo, banco em couro e multimidia.</p>
+        </div>
+
+        <div class="preco-box">
+          <span>Preco anunciado</span>
+          <strong id="carroPreco">R$ 128.900</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="detalhe-grid">
+      <div class="galeria-card">
+        <img class="imagem-principal" id="imagemPrincipal" src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=1400&auto=format&fit=crop" alt="Honda Civic Touring">
+
+        <div class="miniaturas" id="miniaturas" aria-label="Galeria de fotos do veiculo"></div>
+      </div>
+
+      <aside class="resumo-card">
+        <h2>Resumo do veiculo</h2>
+
+        <div class="resumo-lista">
+          <div>
+            <span>Ano</span>
+            <strong id="carroAno">2022</strong>
+          </div>
+          <div>
+            <span>Quilometragem</span>
+            <strong id="carroKm">32.000 KM</strong>
+          </div>
+          <div>
+            <span>Cidade</span>
+            <strong id="carroCidade">Uberlandia</strong>
+          </div>
+          <div>
+            <span>Combustivel</span>
+            <strong id="carroCombustivel">Flex</strong>
+          </div>
+          <div>
+            <span>Cambio</span>
+            <strong id="carroCambio">Automatico</strong>
+          </div>
+          <div>
+            <span>Cor</span>
+            <strong id="carroCor">Prata</strong>
+          </div>
+        </div>
+
+        <div class="acoes-card">
+          <a class="botao-principal" href="#contato">Tenho interesse</a>
+          <button class="botao-secundario" type="button" id="favoritoBtn">Salvar veiculo</button>
+        </div>
+      </aside>
+    </section>
+
+    <section class="conteudo-grid">
+      <article class="info-card">
+        <h2>Descricao</h2>
+        <p id="carroDescricao">
+          Veiculo revisado, com procedencia e pronto para transferir.
+        </p>
+
+        <h3>Itens do veiculo</h3>
+        <ul class="itens-lista" id="itensLista"></ul>
+      </article>
+
+      <article class="info-card">
+        <h2>Simular financiamento</h2>
+
+        <div class="simulador">
+          <label for="entrada">Entrada</label>
+          <input type="range" id="entrada" min="10000" max="90000" step="1000" value="35000">
+
+          <div class="simulador-valores">
+            <span id="entradaValor">R$ 35.000</span>
+            <strong id="parcelaValor">48x de R$ 2.598</strong>
+          </div>
+        </div>
+
+        <p class="observacao">
+          Simulacao aproximada, sem consulta de credito e sujeita a analise.
+        </p>
+      </article>
+    </section>
+
+    <section class="contato-card" id="contato">
+      <div>
+        <h2>Fale com a loja</h2>
+        <p>Envie seus dados para reservar o atendimento deste veiculo.</p>
+      </div>
+
+      <form class="contato-form">
+        <div class="input-group">
+          <label for="nome">Nome</label>
+          <input id="nome" type="text" placeholder="Digite seu nome">
+        </div>
+
+        <div class="input-group">
+          <label for="telefone">Telefone</label>
+          <input id="telefone" type="tel" placeholder="(00) 00000-0000">
+        </div>
+
+        <div class="input-group">
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" rows="4">Tenho interesse neste veiculo.</textarea>
+        </div>
+
+        <button type="submit">Enviar interesse</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="/js/loadComponent.js"></script>
+  <script src="/js/detalhes-carro.js"></script>
+</body>
+</html>
