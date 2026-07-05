@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/global.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="navbar"></div>
+
+    <div class="container">
+
+        <div class="form-box">
+            <h1>Cadastrar Veículo</h1>
+            <p>Preencha todos os dados do veículo</p>
+
+            <form>
+
+                <div class="input-group">
+                    <label>Marca</label>
+                    <input type="text" placeholder="Ex: Fiat">
+                </div>
+
+                <div class="input-group">
+                    <label>Modelo</label>
+                    <input type="text" placeholder="Ex: Gol">
+                </div>
+
+                <div class="input-group">
+                    <label>Ano de Fabricação</label>
+                    <input type="number" placeholder="1994">
+                </div>
+
+                <div class="input-group">
+                    <label>Quilometragem</label>
+                    <input type="number" placeholder="Ex: 75.000">
+                </div>
+
+                <div class="input-group">
+                    <label>Descrição</label>
+                    <input type="text" placeholder="Digite">
+                </div>
+
+                <div class="input-group">
+                    <label>Valor</label>
+                    <input type="number" placeholder="R$">
+                </div>
+
+                <div class="input-group">
+                    <label>Cidade</label>
+                    <input type="text">
+                </div>
+
+                <div class="input-group">
+                    <label>UF</label>
+                    <input type="text" placeholder="Ex: MG">
+                </div>
+
+                <div class="input-fotos">
+                    <label for="file" class="file-label">Escolher fotos</label>
+                    <input type="file" id="file" multiple accept="image/*" class="file-input">
+                </div>
+
+
+                <button type="submit">
+                    Criar Anúncio
+                </button>
+
+            </form>
+
+
+
+        </div>
+
+    </div>
+
+    <script src="/js/loadComponent.js"></script>
+
+</body>
+
+</html>
