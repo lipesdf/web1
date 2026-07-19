@@ -150,7 +150,10 @@ function configurarAcoes() {
 
   document.querySelector('.contato-form').addEventListener('submit', (event) => {
     event.preventDefault();
-    alert('Interesse registrado para contato. Esta tela ainda nao envia dados para backend.');
+    const dados = lerDados();
+    dados.interesses.push({ id: Date.now(), veiculoId: parametros.get('id') || 'civic', nome: document.getElementById('nome').value, telefone: document.getElementById('telefone').value, mensagem: document.getElementById('mensagem').value });
+    salvarDados(dados);
+    alert('Interesse registrado com sucesso.');
   });
 }
 

@@ -276,9 +276,15 @@
 }
 
 .contato-form .input-group:last-of-type,
-.contato-form button{
+.contato-form button,
+.contato-acoes{
   grid-column: 1 / -1;
 }
+
+.contato-acoes { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.contato-acoes button { margin: 0; }
+.botao-whatsapp { display: flex; align-items: center; justify-content: center; min-height: 50px; border-radius: 12px; background: #25d366; color: #fff; font-weight: bold; text-align: center; }
+.botao-whatsapp:hover { background: #1da851; }
 
 .input-group textarea{
   width: 100%;
@@ -343,6 +349,8 @@
   .contato-form{
     grid-template-columns: 1fr;
   }
+
+  .contato-acoes { grid-template-columns: 1fr; }
 
   .imagem-principal{
     height: 260px;

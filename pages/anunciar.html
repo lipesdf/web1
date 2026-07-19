@@ -1,84 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style/global.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anunciar veículo | S&amp;J Car</title>
+  <link rel="icon" href="../assets/favicon.ico">
+  <link rel="stylesheet" href="../style/global.css">
 </head>
-
 <body>
-    <div id="navbar"></div>
-
-    <div class="container">
-
-        <div class="form-box">
-            <h1>Cadastrar Veículo</h1>
-            <p>Preencha todos os dados do veículo</p>
-
-            <form>
-
-                <div class="input-group">
-                    <label>Marca</label>
-                    <input type="text" placeholder="Ex: Fiat">
-                </div>
-
-                <div class="input-group">
-                    <label>Modelo</label>
-                    <input type="text" placeholder="Ex: Gol">
-                </div>
-
-                <div class="input-group">
-                    <label>Ano de Fabricação</label>
-                    <input type="number" placeholder="1994">
-                </div>
-
-                <div class="input-group">
-                    <label>Quilometragem</label>
-                    <input type="number" placeholder="Ex: 75.000">
-                </div>
-
-                <div class="input-group">
-                    <label>Descrição</label>
-                    <input type="text" placeholder="Digite as informações do veículo">
-                </div>
-
-                <div class="input-group">
-                    <label>Valor</label>
-                    <input type="number" placeholder="R$">
-                </div>
-
-                <div class="input-group">
-                    <label>Cidade</label>
-                    <input type="text" placeholder="São Paulo">
-                </div>
-
-                <div class="input-group">
-                    <label>UF</label>
-                    <input type="text" placeholder="Ex: MG">
-                </div>
-
-                <div class="input-fotos">
-                    <label for="file" class="file-label">Escolher fotos</label>
-                    <input type="file" id="file" multiple accept="image/*" class="file-input">
-                </div>
-
-
-                <button type="submit">
-                    Criar Anúncio
-                </button>
-
-            </form>
-
-
-
-        </div>
-
-    </div>
-
-    <script src="/js/loadComponent.js"></script>
-
+  <div id="navbar"></div>
+  <main class="container">
+    <a class="voltar-link" href="painel.html">&larr; Voltar para área do anunciante</a>
+    <section class="form-box" aria-labelledby="titulo-anuncio">
+      <h1 id="titulo-anuncio">Cadastrar veículo</h1>
+      <p>Preencha todos os dados do veículo.</p>
+      <form id="anuncioForm" novalidate>
+        <div class="input-group"><label for="marca">Marca</label><select id="marca" name="marca" required><option value="">Selecione a marca</option></select></div>
+        <div class="input-group"><label for="modelo">Modelo</label><select id="modelo" name="modelo" required disabled><option value="">Selecione primeiro a marca</option></select></div>
+        <div class="input-group"><label for="ano">Ano de fabricação</label><input id="ano" name="ano" required type="number" min="1900" max="2026"></div>
+        <div class="input-group"><label for="cor">Cor</label><input id="cor" name="cor" required type="text" placeholder="Ex.: Prata"></div>
+        <div class="input-group"><label for="quilometragem">Quilometragem</label><input id="quilometragem" name="quilometragem" required type="number" min="0"></div>
+        <div class="input-group"><label for="descricao">Descrição</label><textarea id="descricao" name="descricao" required rows="4"></textarea></div>
+        <div class="input-group"><label for="valor">Valor</label><input id="valor" name="valor" required type="number" min="0" step="0.01"></div>
+        <div class="input-group"><label for="estado">Estado (UF)</label><input id="estado" name="estado" type="text" required maxlength="2" placeholder="MG"></div>
+        <div class="input-group"><label for="cidade">Cidade</label><input id="cidade" name="cidade" type="text" required placeholder="Uberlândia"></div>
+        <div class="input-fotos"><label for="fotos" class="file-label">Escolher fotos (mínimo de 3)</label><input id="fotos" name="fotos" required type="file" multiple accept="image/*" class="file-input"></div>
+        <button type="submit">Criar anúncio</button>
+      </form>
+    </section>
+  </main>
+  <div id="footer"></div>
+  <script src="../js/restrito.js"></script><script src="../js/appData.js"></script><script src="../js/validacao.js"></script><script src="../js/loadComponent.js"></script><script src="../js/catalogo-form.js"></script>
 </body>
-
 </html>

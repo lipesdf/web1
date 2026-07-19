@@ -1,62 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/style/global.css">
-  <title>Document</title>
+  <title>Cadastro | S&amp;J Car</title>
+  <link rel="icon" href="../assets/favicon.ico">
+  <link rel="stylesheet" href="../style/global.css">
 </head>
 <body>
   <div id="navbar"></div>
-
-  <div class="container">
-
-    <div class="form-box">
-      <h1>Cadastro</h1>
-      <p>Preencha os dados para criar sua conta</p>
-
-      <form>
-
-        <div class="input-group">
-          <label>Nome completo</label>
-          <input type="text" placeholder="Digite seu nome">
-        </div>
-
-        <div class="input-group">
-          <label>CPF</label>
-          <input type="text" placeholder="Digite seu CPF">
-        </div>
-
-        <div class="input-group">
-          <label>E-mail</label>
-          <input type="email" placeholder="Digite seu e-mail">
-        </div>
-
-        <div class="input-group">
-          <label>Senha</label>
-          <input type="password" placeholder="Digite sua senha">
-        </div>
-
-        <div class="input-group">
-          <label>Confirmar senha</label>
-          <input type="password" placeholder="Confirme sua senha">
-        </div>
-
-        <button type="submit">
-          Criar Conta
-        </button>
-
+  <main class="container">
+    <section class="form-box" aria-labelledby="titulo-cadastro">
+      <h1 id="titulo-cadastro">Cadastro</h1>
+      <p>Preencha os dados para criar sua conta.</p>
+      <form id="cadastroForm" novalidate>
+        <div class="input-group"><label for="nome">Nome</label><input id="nome" name="nome" type="text" autocomplete="name" required></div>
+        <div class="input-group"><label for="cpf">CPF</label><input id="cpf" name="cpf" type="text" inputmode="numeric" maxlength="14" placeholder="000.000.000-00" required></div>
+        <div class="input-group"><label for="email">E-mail</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+        <div class="input-group"><label for="senha">Senha</label><div class="senha-wrapper"><input id="senha" name="senha" type="password" autocomplete="new-password" minlength="6" required><button class="toggle-password" type="button" aria-label="Mostrar senha" data-target="senha">&#128065;</button></div></div>
+        <div class="input-group"><label for="telefone">Telefone</label><input id="telefone" name="telefone" type="tel" autocomplete="tel" maxlength="15" placeholder="(00) 00000-0000" required></div>
+        <button type="submit">Criar conta</button>
       </form>
-
-      <div class="login-link">
-        Já possui conta?
-        <a href="#">Entrar</a>
-      </div>
-
-    </div>
-
-  </div>
-
-  <script src="/js/loadComponent.js"></script>
+      <p class="form-link">Já possui conta? <a href="login.html">Entrar</a></p>
+    </section>
+  </main>
+  <div id="footer"></div>
+  <script src="../js/loadComponent.js"></script>
+  <script src="../js/appData.js"></script><script src="../js/validacao.js"></script>
 </body>
 </html>

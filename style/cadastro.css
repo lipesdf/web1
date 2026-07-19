@@ -2,8 +2,12 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  margin: 30px 30px;
+  margin: 40px auto;
+  padding: 0 20px;
+  flex-direction: column;
+  align-items: center;
 }
+.container > .voltar-link { display: block; align-self: center; width: 100%; max-width: 500px; margin: 0 0 16px; }
 
 .form-box{
   width: 100%;

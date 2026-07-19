@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Detalhes do Veiculo | S&J CAR</title>
-  <link rel="icon" href="/assets/favicon.ico">
-  <link rel="stylesheet" href="/style/global.css">
+  <title>Detalhes do Veículo | S&amp;J CAR</title>
+  <link rel="icon" href="../assets/favicon.ico">
+  <link rel="stylesheet" href="../style/global.css">
 </head>
 <body>
   <div id="navbar"></div>
 
   <main class="detalhe-page">
     <section class="detalhe-header">
-      <a class="voltar-link" href="/pages/home.html">Voltar para veiculos</a>
+      <a class="voltar-link" href="home.html">Voltar para veículos</a>
 
       <div class="detalhe-titulo">
         <div>
@@ -32,7 +32,7 @@
       <div class="galeria-card">
         <img class="imagem-principal" id="imagemPrincipal" src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=1400&auto=format&fit=crop" alt="Honda Civic Touring">
 
-        <div class="miniaturas" id="miniaturas" aria-label="Galeria de fotos do veiculo"></div>
+        <div class="miniaturas" id="miniaturas" role="group" aria-label="Galeria de fotos do veiculo"></div>
       </div>
 
       <aside class="resumo-card">
@@ -124,12 +124,18 @@
           <textarea id="mensagem" rows="4">Tenho interesse neste veiculo.</textarea>
         </div>
 
-        <button type="submit">Enviar interesse</button>
+        <div class="contato-acoes">
+          <button type="submit">Enviar interesse</button>
+          <a class="botao-whatsapp" href="https://wa.me/5534999999999?text=Ol%C3%A1%2C%20tenho%20interesse%20neste%20ve%C3%ADculo." target="_blank" rel="noopener noreferrer">Falar pelo WhatsApp</a>
+        </div>
       </form>
     </section>
   </main>
 
-  <script src="/js/loadComponent.js"></script>
-  <script src="/js/detalhes-carro.js"></script>
+  <div id="footer"></div>
+
+  <script src="../js/loadComponent.js"></script>
+  <script src="../js/detalhes-carro.js"></script>
+  <script src="../js/appData.js"></script>
 </body>
 </html>

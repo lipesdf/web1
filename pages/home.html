@@ -1,114 +1,117 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>S&J CAR</title>
-  <link rel="icon" href="/assets/favicon.ico">
-  <link rel="stylesheet" href="/style/global.css">
+  <title>S&amp;J Car | Veículos</title>
+  <link rel="icon" href="../assets/favicon.ico">
+  <link rel="stylesheet" href="../style/global.css">
 </head>
 <body>
   <div id="navbar"></div>
 
   <main>
-    <div class="buscar">
-      <p>Busque por:</p>
-      <input type="text" placeholder="Digite o nome do carro..." />
+    <section class="hero" aria-labelledby="titulo-principal">
+      <h1 id="titulo-principal">Encontre o veículo ideal para você</h1>
+      <p>Consulte anúncios de veículos disponíveis em sua cidade.</p>
+    </section>
 
-      <select name="cidade" id="cidade">
-        <option value="">Cidade</option>
-        <option value="opcao1">São Paulo</option>
-        <option value="opcao2">Rio de Janeiro</option>
-        <option value="opcao3">Belo Horizonte</option>
-        <option value="opcao4">Uberlândia</option>
-        <option value="opcao5">Curitiba</option>
-        <option value="opcao6">Porto Alegre</option>
-      </select>
+    <div class="portal-layout">
+    <form class="buscar" id="filtroForm" action="#anuncios">
+      <div class="campo-busca">
+        <label for="marca">Marca</label>
+        <select name="marca" id="marca">
+          <option value="">Todas as marcas</option>
+          <option value="chevrolet">Chevrolet</option>
+          <option value="honda">Honda</option>
+          <option value="hyundai">Hyundai</option>
+        </select>
+      </div>
+      <div class="campo-busca">
+        <label for="modelo">Modelo</label>
+        <select name="modelo" id="modelo">
+          <option value="">Todos os modelos</option>
+          <option value="civic">Civic</option>
+          <option value="creta">Creta</option>
+          <option value="onix">Onix</option>
+        </select>
+      </div>
+      <div class="campo-busca">
+        <label for="cidade">Localização</label>
+        <select name="cidade" id="cidade">
+          <option value="">Todas as cidades</option>
+          <option value="uberlandia">Uberlândia</option>
+          <option value="belo-horizonte">Belo Horizonte</option>
+          <option value="sao-paulo">São Paulo</option>
+        </select>
+      </div>
+      <button type="submit" class="sr-only">Aplicar filtros</button>
+    </form>
 
-      <select name="marca" id="buscar">
-        <option value="">Marca</option>
-        <option value="opcao1">Honda</option>
-        <option value="opcao2">Chevrolet</option>
-        <option value="opcao2">Fiat</option>
-        <option value="opcao2">Ford</option>
-        <option value="opcao2">Hyundai</option>
-        <option value="opcao2">Mitsubishi</option>
-      </select>
-
+    <section class="secao-anuncios" id="anuncios" aria-labelledby="titulo-anuncios">
+      <h2 id="titulo-anuncios">Anúncios recentes</h2>
+      <div class="cards">
+        <article class="card" data-marca="honda" data-modelo="civic" data-cidade="uberlandia">
+          <a class="card-link" href="detalhes-carro.html?id=civic"><div class="card-media"><img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Honda Civic Touring prata"></div></a>
+          <div class="card-content">
+            <h3><a class="titulo-carro" href="detalhes-carro.html?id=civic">Honda Civic Touring</a></h3>
+            <p class="descricao">Sedan automático completo, banco em couro e multimídia.</p>
+            <div class="info"><span>2022</span><span>32.000 km</span></div>
+            <p class="preco">R$ 128.900</p>
+          </div>
+        </article>
+        <article class="card" data-marca="hyundai" data-modelo="creta" data-cidade="uberlandia">
+          <a class="card-link" href="detalhes-carro.html?id=creta"><div class="card-media"><img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Hyundai Creta branco"></div></a>
+          <div class="card-content">
+            <h3><a class="titulo-carro" href="detalhes-carro.html?id=creta">Hyundai Creta</a></h3>
+            <p class="descricao">SUV confortável, econômico e perfeito para viagens longas.</p>
+            <div class="info"><span>2023</span><span>12.500 km</span></div>
+            <p class="preco">R$ 145.000</p>
+          </div>
+        </article>
+        <article class="card" data-marca="chevrolet" data-modelo="onix" data-cidade="uberlandia">
+          <a class="card-link" href="detalhes-carro.html?id=onix"><div class="card-media"><img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Chevrolet Onix vermelho"></div></a>
+          <div class="card-content">
+            <h3><a class="titulo-carro" href="detalhes-carro.html?id=onix">Chevrolet Onix</a></h3>
+            <p class="descricao">Compacto moderno com ótimo consumo e central multimídia.</p>
+            <div class="info"><span>2021</span><span>48.000 km</span></div>
+            <p class="preco">R$ 78.500</p>
+          </div>
+        </article>
+        <article class="card" data-marca="ford" data-modelo="mustang" data-cidade="sao-paulo">
+          <a class="card-link" href="detalhes-carro.html?id=mustang"><div class="card-media"><img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Ford Mustang azul"></div></a>
+          <div class="card-content">
+            <h3><a class="titulo-carro" href="detalhes-carro.html?id=mustang">Ford Mustang</a></h3>
+            <p class="descricao">Esportivo potente, acabamento premium e tecnologia embarcada.</p>
+            <div class="info"><span>2020</span><span>28.400 km</span></div>
+            <p class="preco">R$ 289.900</p>
+          </div>
+        </article>
+        <article class="card" data-marca="volkswagen" data-modelo="tcross" data-cidade="belo-horizonte">
+          <a class="card-link" href="detalhes-carro.html?id=tcross"><div class="card-media"><img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Volkswagen T-Cross branco"></div></a>
+          <div class="card-content">
+            <h3><a class="titulo-carro" href="detalhes-carro.html?id=tcross">Volkswagen T-Cross</a></h3>
+            <p class="descricao">SUV compacto, confortável e econômico para a cidade.</p>
+            <div class="info"><span>2024</span><span>8.200 km</span></div>
+            <p class="preco">R$ 119.900</p>
+          </div>
+        </article>
+        <article class="card" data-marca="toyota" data-modelo="corolla" data-cidade="uberlandia">
+          <a class="card-link" href="detalhes-carro.html?id=corolla"><div class="card-media"><img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Toyota Corolla prata"></div></a>
+          <div class="card-content">
+            <h3><a class="titulo-carro" href="detalhes-carro.html?id=corolla">Toyota Corolla</a></h3>
+            <p class="descricao">Sedan confiável, revisado e com excelente espaço interno.</p>
+            <div class="info"><span>2022</span><span>35.700 km</span></div>
+            <p class="preco">R$ 132.500</p>
+          </div>
+        </article>
+      </div>
+    </section>
     </div>
-
-    <div class="cards">
-
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=1200&auto=format&fit=crop" alt="Carro">
-
-        <div class="card-content">
-          <h2>Honda Civic Touring</h2>
-
-          <p class="descricao">
-            Sedan automático completo, banco em couro e multimídia.
-          </p>
-
-          <div class="info">
-            <span>2022</span>
-            <span>Uberlândia</span>
-            <span>32.000 KM</span>
-          </div>
-
-          <h3>R$ 128.900</h3>
-
-          <a class="card-button" href="/pages/detalhes-carro.html?id=civic">Ver detalhes</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1200&auto=format&fit=crop" alt="Carro">
-
-        <div class="card-content">
-          <h2>Hyundai Creta</h2>
-
-          <p class="descricao">
-            SUV confortável, econômico e perfeito para viagens longas.
-          </p>
-
-          <div class="info">
-            <span>2023</span>
-            <span>Uberlândia</span>
-            <span>12.500 KM</span>
-          </div>
-
-          <h3>R$ 145.000</h3>
-
-          <a class="card-button" href="/pages/detalhes-carro.html?id=creta">Ver detalhes</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1200&auto=format&fit=crop" alt="Carro">
-
-        <div class="card-content">
-          <h2>Chevrolet Onix</h2>
-
-          <p class="descricao">
-            Compacto moderno com ótimo consumo e central multimídia.
-          </p>
-
-          <div class="info">
-            <span>2021</span>
-            <span>Uberlândia</span>
-            <span>48.000 KM</span>
-          </div>
-
-          <h3>R$ 78.500</h3>
-
-          <a class="card-button" href="/pages/detalhes-carro.html?id=onix">Ver detalhes</a>
-        </div>
-      </div>
-
-    </div>
-
   </main>
 
-  <script src="/js/loadComponent.js"></script>
+  <div id="footer"></div>
+  <script src="../js/loadComponent.js"></script>
+  <script src="../js/appData.js"></script><script src="../js/home.js?v=3"></script>
 </body>
 </html>

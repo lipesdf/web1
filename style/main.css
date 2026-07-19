@@ -1,18 +1,23 @@
-/* BUSCA */
+main { max-width: 1400px; margin: 0 auto; }
+.hero { width: 90%; max-width: 1200px; margin: 36px auto 24px; color: #111; }
+.hero h1 { font-size: clamp(28px, 4vw, 42px); margin-bottom: 8px; }
+.hero p { color: #666; }
+.portal-layout { width: min(96%, 1800px); max-width: none; margin: 30px auto 50px; display: grid !important; grid-template-columns: 320px minmax(0, 1fr) !important; gap: 36px; align-items: start; }
+/* Busca lateral */
 .buscar{
-  width: 90%;
-  max-width: 1200px;
-
-  margin: 40px auto;
+  width: 100%;
+  margin: 0;
   padding: 25px;
 
   background-color: white;
   border-radius: 15px;
 
   display: flex;
-  align-items: center;
-  gap: 15px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 16px;
+  position: sticky;
+  top: 20px;
 
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
@@ -22,6 +27,8 @@
   font-weight: bold;
   color: #333;
 }
+.campo-busca { display: flex; flex-direction: column; gap: 7px; }
+.campo-busca label { color: #333; font-size: 14px; font-weight: bold; }
 
 /* INPUT FLEXÍVEL */
 .buscar input{
@@ -30,9 +37,7 @@
 }
 
 /* SELECT FIXO */
-.buscar select{
-  width: 180px;
-}
+.buscar select { width: 100%; }
 
 .buscar input,
 .buscar select{
@@ -46,7 +51,7 @@
 
   font-size: 15px;
 
-  min-width: 200px;
+  min-width: 0;
 
   transition: 0.3s;
 }
@@ -80,15 +85,16 @@
 /* CARDS */
 
 .cards{
-  width: 90%;
-  max-width: 1200px;
-
-  margin: 40px auto;
+  width: 100%;
+  margin: 0;
 
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 25px;
 }
+.secao-anuncios { min-width: 0; }
+.secao-anuncios h2 { color: #111; margin-bottom: 18px; }
+#resultado-busca { color: #555; margin-bottom: 16px; }
 
 .card{
   background-color: white;
@@ -101,18 +107,28 @@
   transition: 0.3s;
 
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
 }
+.card[hidden] { display: none !important; }
 
 .card img{
   width: 100%;
-  height: 220px;
+  height: 185px;
 
   object-fit: cover;
 }
 
 .card-content{
-  padding: 20px;
+  padding: 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
+.card-link { display: block; }
+.acoes-anuncio { display: grid; gap: 12px; margin-top: auto; }
+.titulo-carro { color: #111; }
+.titulo-carro:hover { text-decoration: underline; }
 
 .card-content h2{
   font-size: 22px;
@@ -129,20 +145,60 @@
 }
 
 .info{
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: 6px;
 
   margin-bottom: 15px;
 
   color: #444;
   font-weight: bold;
+  font-size: 0.82rem;
+  line-height: 1.25;
 }
+
+.info span {
+  min-width: 0;
+  white-space: nowrap;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-media { position: relative; }
+.card-media img { display: block; }
+.carrossel-btn { position: absolute; top: 50%; transform: translateY(-50%); width: 30px; height: 30px; padding: 0; margin: 0; border-radius: 50%; background: rgba(0,0,0,.65); color: #fff; z-index: 1; }
+.carrossel-btn.anterior { left: 8px; }
+.carrossel-btn.proximo { right: 8px; }
 
 .card-content h3{
   font-size: 28px;
   color: #000;
 
   margin-bottom: 15px;
+}
+
+.card-content .preco {
+  margin: auto 0 0;
+  color: #111;
+  font-size: 1.55rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+@media (max-width: 520px) {
+  .portal-layout { grid-template-columns: 1fr !important; width: 94%; }
+  .buscar { position: static; }
+  .cards { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 1150px) {
+  .cards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (max-width: 850px) {
+  .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 .card-content button,
@@ -166,6 +222,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 0;
 }
 
 .card-content button:hover,
