@@ -3,6 +3,7 @@
 @import url("detalhes-carro.css");
 @import url("cadastro.css");
 @import url("login.css");
+@import url("anunciar.css");
 
 *{
   margin: 0;
@@ -31,8 +32,23 @@ a {
 .excluir-anuncio { margin-top: 0 !important; }
 .botao-excluir { width: auto; padding: 0 22px; background: #a00000; }
 .botao-excluir:hover { background: #780000; }
+.notificacoes-painel { width: 100%; max-width: 500px; margin-bottom: 18px; color: #222; }
+.notificacao-topo { padding: 18px; border-radius: 14px 14px 0 0; background: #fff4d6; border: 1px solid #ead28d; display: flex; justify-content: space-between; align-items: center; gap: 15px; }
+.notificacao-topo > div { display: flex; align-items: center; gap: 12px; }
+.notificacao-icone { width: 34px; height: 34px; display: grid; place-items: center; border-radius: 50%; background: #e4a400; color: #fff; font-weight: bold; }
+.notificacao-topo p { margin: 3px 0 0 !important; font-size: 13px; }
+.notificacao-topo a { padding: 8px 12px; border-radius: 9px; background: #111; color: #fff; white-space: nowrap; }
+.notificacoes-painel ul { padding: 10px 16px; background: #fff; border: 1px solid #ddd; border-top: 0; border-radius: 0 0 14px 14px; }
+.notificacoes-painel li { display: flex; justify-content: space-between; padding: 8px 0; color: #444; }
+.sem-notificacoes { padding: 14px; border-radius: 12px; background: #eaf7ee; color: #28633a !important; }
+.cabecalho-meus-anuncios { display: flex; justify-content: space-between; align-items: center; gap: 20px; margin-bottom: 22px; }
+.novo-anuncio-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 18px; border-radius: 11px; background: #111; color: #fff; font-weight: 700; white-space: nowrap; }
+.novo-anuncio-btn:hover { background: #333; }
+@media (max-width: 600px) { .cabecalho-meus-anuncios { align-items: stretch; flex-direction: column; } .novo-anuncio-btn { width: 100%; } }
 .form-erro { padding: 10px; border-radius: 8px; background: #ffe5e5; color: #a00000 !important; }
 .form-erro.sucesso { background: #e5f8eb; color: #176b31 !important; }
+.input-group .invalido { border-color: #b42318 !important; box-shadow: 0 0 0 3px rgba(180,35,24,.12); }
+.mensagem-campo { display: block; margin-top: 5px; color: #b42318; font-size: 12px; font-weight: 600; }
 .senha-wrapper { position: relative; width: 100%; }
 .senha-wrapper input { padding-right: 48px !important; }
 .toggle-password { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); width: 36px; height: 36px; margin: 0; padding: 0; background: transparent; color: #555; font-size: 18px; }

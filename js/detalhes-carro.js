@@ -70,6 +70,17 @@ const formatarMoeda = (valor) => valor.toLocaleString('pt-BR', {
 const parametros = new URLSearchParams(window.location.search);
 const carroSelecionado = carros[parametros.get('id')] || carros.civic;
 
+async function carregarAnuncioApi() {
+  const id = parametros.get('id');
+  if (!id || !/^\d+$/.test(id)) return;
+  try {
+    const resposta = await fetch(`../api.php?acao=anuncio&id=${id}`); const resultado = await resposta.json();
+    if (!resultado.sucesso) return;
+    const a = resultado.anuncio;
+    preencherDetalhes({ categoria: 'Veículo', nome: `${a.Marca} ${a.Modelo}`, resumo: a.Descricao, preco: Number(a.Valor), ano: a.AnoFabricacao, km: `${Number(a.Quilometragem).toLocaleString('pt-BR')} KM`, cidade: a.Cidade, combustivel: '-', cambio: '-', cor: a.Cor, descricao: a.Descricao, itens: [], imagens: a.fotos.map(f => `../uploads/${f}`) });
+  } catch (erro) { console.error(erro); }
+}
+
 function preencherDetalhes(carro) {
   document.title = `${carro.nome} | S&J CAR`;
   document.getElementById('carroCategoria').textContent = carro.categoria;
@@ -150,13 +161,15 @@ function configurarAcoes() {
 
   document.querySelector('.contato-form').addEventListener('submit', (event) => {
     event.preventDefault();
-    const dados = lerDados();
-    dados.interesses.push({ id: Date.now(), veiculoId: parametros.get('id') || 'civic', nome: document.getElementById('nome').value, telefone: document.getElementById('telefone').value, mensagem: document.getElementById('mensagem').value });
-    salvarDados(dados);
-    alert('Interesse registrado com sucesso.');
+    if (/^\d+$/.test(parametros.get('id') || '')) {
+      fetch('../api.php?acao=cadastrar-interesse', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ idAnuncio: parametros.get('id'), nome: document.getElementById('nome').value, telefone: document.getElementById('telefone').value, mensagem: document.getElementById('mensagem').value }) }).then(() => alert('Interesse registrado com sucesso.'));
+      return;
+    }
+    alert('Este anúncio não está disponível no banco de dados.');
   });
 }
 
 preencherDetalhes(carroSelecionado);
 configurarSimulador(carroSelecionado);
 configurarAcoes();
+carregarAnuncioApi();

@@ -24,12 +24,12 @@
         <div class="input-group"><label for="valor">Valor</label><input id="valor" name="valor" required type="number" min="0" step="0.01"></div>
         <div class="input-group"><label for="estado">Estado (UF)</label><input id="estado" name="estado" type="text" required maxlength="2" placeholder="MG"></div>
         <div class="input-group"><label for="cidade">Cidade</label><input id="cidade" name="cidade" type="text" required placeholder="Uberlândia"></div>
-        <div class="input-fotos"><label for="fotos" class="file-label">Escolher fotos (mínimo de 3)</label><input id="fotos" name="fotos" required type="file" multiple accept="image/*" class="file-input"></div>
+        <div class="input-fotos"><label for="fotos" class="upload-area"><span class="upload-icone" aria-hidden="true">＋</span><strong id="labelFotos">Adicionar fotos do veículo</strong><small>Selecione no mínimo 3 imagens JPG, PNG ou WebP</small></label><input id="fotos" name="fotos[]" required type="file" multiple accept="image/jpeg,image/png,image/webp" class="file-input"><div class="preview-cabecalho" id="previewCabecalho" hidden><strong>Fotos selecionadas</strong><span id="contadorFotos">0 fotos</span></div><div class="preview-fotos" id="previewFotos" aria-live="polite"></div></div>
         <button type="submit">Criar anúncio</button>
       </form>
     </section>
   </main>
   <div id="footer"></div>
-  <script src="../js/restrito.js"></script><script src="../js/appData.js"></script><script src="../js/validacao.js"></script><script src="../js/loadComponent.js"></script><script src="../js/catalogo-form.js"></script>
+  <script src="../js/restrito.js?v=3"></script><script src="../js/loadComponent.js?v=4"></script><script src="../js/catalogo.js"></script><script src="../js/catalogo-form.js"></script><script src="../js/api-anuncio.js?v=5"></script>
 </body>
 </html>

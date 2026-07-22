@@ -18,9 +18,10 @@ img {
 
 .brand { flex: 0 0 auto; }
 .brand img { display: block; width: 110px; }
-.nav-links { margin-left: auto; }
+.nav-links { margin-left: auto; display: flex; flex-direction: column; align-items: flex-end; gap: 5px; }
 .nav-links ul { align-items: center; }
 .nav-links a { color: #fff; font-size: 15px; }
+.nav-usuario { color: #f2c94c; font-size: 13px; font-weight: 700; white-space: nowrap; margin: 0; }
 .menu-toggle { display: none; }
 
 .nav ul {
@@ -33,7 +34,7 @@ img {
   .menu-toggle span:not(.sr-only) { display: block; height: 2px; width: 100%; background: #fff; }
   .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
   .nav { flex-wrap: wrap; }
-  .nav-links { display: none; width: 100%; margin: 8px 0 0; }
+  .nav-links { display: none; width: 100%; margin: 8px 0 0; align-items: stretch; }
   .nav-links.aberto { display: block; }
   .nav-links ul { flex-direction: column; align-items: stretch; gap: 0; }
   .nav-links li { padding: 10px 0; border-top: 1px solid #333; }

@@ -93,6 +93,7 @@ main { max-width: 1400px; margin: 0 auto; }
   gap: 25px;
 }
 .secao-anuncios { min-width: 0; }
+.secao-anuncios .cards { visibility: hidden; }
 .secao-anuncios h2 { color: #111; margin-bottom: 18px; }
 #resultado-busca { color: #555; margin-bottom: 16px; }
 
